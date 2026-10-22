@@ -1,0 +1,2411 @@
+{
+ "$schema": "https://raw.githubusercontent.com/AlejoMFernandez/kit-demos/main/docs/cliente.schema.json",
+ "id": "alicia-devoto",
+ "nombre": "Alicia",
+ "pais": "AR",
+ "idioma": "es",
+ "modo": "demo",
+ "whatsapp": "5491145017226",
+ "prefijoPedido": "AL",
+ "supabase": {
+  "url": "",
+  "anonKey": ""
+ },
+ "marca": {
+  "logo": "img/logo.svg",
+  "logoPanel": "img/logo-blanco.svg",
+  "favicon": "img/favicon.png",
+  "colores": {
+   "fondo": "#F4F1EC",
+   "superficie": "#FFFFFF",
+   "texto": "#1A1817",
+   "primario": "#1A1817",
+   "acento": "#A65F2E",
+   "sobreAcento": "#FFFFFF",
+   "borde": "#1A1817",
+   "ok": "#3D6B3A"
+  },
+  "fuentes": {
+   "titulos": "'Cutive', 'Courier New', serif",
+   "texto": "'Manrope', system-ui, sans-serif",
+   "googleFonts": "Cutive&family=Manrope:wght@400;500;600;700"
+  },
+  "estilo": {
+   "forma": "recta",
+   "sombra": "ninguna",
+   "borde": "1.5px",
+   "mayusculas": true
+  }
+ },
+ "modulos": {
+  "carta": true,
+  "carrito": true,
+  "reservas": true,
+  "admin": true
+ },
+ "horarios": {
+  "lun": [
+   [
+    "08:30",
+    "00:00"
+   ]
+  ],
+  "mar": [
+   [
+    "08:30",
+    "00:00"
+   ]
+  ],
+  "mie": [
+   [
+    "08:30",
+    "00:00"
+   ]
+  ],
+  "jue": [
+   [
+    "08:30",
+    "00:00"
+   ]
+  ],
+  "dom": [
+   [
+    "08:30",
+    "00:00"
+   ]
+  ],
+  "vie": [
+   [
+    "08:30",
+    "01:30"
+   ]
+  ],
+  "sab": [
+   [
+    "08:30",
+    "01:30"
+   ]
+  ]
+ },
+ "reservas": {
+  "intervaloMin": 30,
+  "duracionMin": 90,
+  "capacidad": 60,
+  "maxPersonas": 10,
+  "anticipacionMin": 60,
+  "diasAdelante": 30,
+  "ultimoTurnoMin": 90,
+  "cerrados": []
+ },
+ "pedidos": {
+  "salidas": [
+   "whatsapp",
+   "mercadopago"
+  ],
+  "tipos": [
+   "retiro"
+  ],
+  "envio": 0,
+  "minimo": 0
+ },
+ "pagos": {
+  "mercadopago": {
+   "endpoint": "https://kit-demos-amf.vercel.app/api/mp-preference",
+   "modo": "sandbox"
+  }
+ },
+ "carta": {
+  "categorias": [
+   {
+    "id": "mananas",
+    "nombre": "Mañanas",
+    "orden": 0
+   },
+   {
+    "id": "tardes",
+    "nombre": "Hora del té",
+    "orden": 1
+   },
+   {
+    "id": "tortas",
+    "nombre": "Tortas",
+    "orden": 2
+   },
+   {
+    "id": "sandwiches",
+    "nombre": "Sandwiches",
+    "orden": 3
+   },
+   {
+    "id": "panaderia",
+    "nombre": "Panadería",
+    "orden": 4
+   },
+   {
+    "id": "pasteleria",
+    "nombre": "Pastelería",
+    "orden": 5
+   },
+   {
+    "id": "sin-tacc",
+    "nombre": "Sin TACC",
+    "orden": 6
+   },
+   {
+    "id": "tapeo",
+    "nombre": "Tapeo",
+    "orden": 7
+   },
+   {
+    "id": "entradas",
+    "nombre": "Entradas",
+    "orden": 8
+   },
+   {
+    "id": "ensaladas",
+    "nombre": "Ensaladas",
+    "orden": 9
+   },
+   {
+    "id": "carnes",
+    "nombre": "Carnes y pescados",
+    "orden": 10
+   },
+   {
+    "id": "cocina",
+    "nombre": "Nuestra cocina",
+    "orden": 11
+   },
+   {
+    "id": "kids",
+    "nombre": "Menú kids",
+    "orden": 12
+   },
+   {
+    "id": "postres",
+    "nombre": "Postres",
+    "orden": 13
+   },
+   {
+    "id": "bebidas",
+    "nombre": "Bebidas",
+    "orden": 14
+   },
+   {
+    "id": "cafeteria",
+    "nombre": "Cafetería",
+    "orden": 15
+   },
+   {
+    "id": "te",
+    "nombre": "Té en hebras · Tealosophy",
+    "orden": 16
+   },
+   {
+    "id": "jugos",
+    "nombre": "Jugos, limonadas y licuados",
+    "orden": 17
+   },
+   {
+    "id": "cervezas",
+    "nombre": "Cervezas",
+    "orden": 18
+   },
+   {
+    "id": "tragos-alicia",
+    "nombre": "Tragos Alicia",
+    "orden": 19
+   },
+   {
+    "id": "tragos-clasicos",
+    "nombre": "Tragos clásicos",
+    "orden": 20
+   },
+   {
+    "id": "whisky",
+    "nombre": "Whisky",
+    "orden": 21
+   },
+   {
+    "id": "vino-copa",
+    "nombre": "Vino por copa",
+    "orden": 22
+   },
+   {
+    "id": "malbec",
+    "nombre": "Malbec",
+    "orden": 23
+   },
+   {
+    "id": "cabernet",
+    "nombre": "Cabernet Sauvignon",
+    "orden": 24
+   },
+   {
+    "id": "cabernet-franc",
+    "nombre": "Cabernet Franc",
+    "orden": 25
+   },
+   {
+    "id": "pinot-noir",
+    "nombre": "Pinot Noir",
+    "orden": 26
+   },
+   {
+    "id": "blancos",
+    "nombre": "Blancos",
+    "orden": 27
+   },
+   {
+    "id": "rosados",
+    "nombre": "Dulces y rosados",
+    "orden": 28
+   },
+   {
+    "id": "espumantes",
+    "nombre": "Espumantes",
+    "orden": 29
+   }
+  ],
+  "productos": [
+   {
+    "id": "desayuno-de-campo",
+    "categoria": "mananas",
+    "nombre": "Desayuno de campo",
+    "descripcion": "Café con leche, 2 tostadas de pan de campo o multicereal, mermelada y queso crema.",
+    "precio": 11900,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "cafe-con-medialunas",
+    "categoria": "mananas",
+    "nombre": "Café con medialunas",
+    "descripcion": "Café con leche y 2 medialunas.",
+    "precio": 9800,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "desayuno-completo",
+    "categoria": "mananas",
+    "nombre": "Desayuno completo",
+    "descripcion": "Café con leche, jugo de naranja, huevos revueltos y panceta.",
+    "precio": 16900,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "tostadas-multicereal",
+    "categoria": "mananas",
+    "nombre": "Tostadas multicereal",
+    "descripcion": "Pan multicereal con queso crema y mermelada.",
+    "precio": 8900,
+    "etiquetas": [
+     "veggie"
+    ],
+    "orden": 3
+   },
+   {
+    "id": "bowl-de-frutas",
+    "categoria": "mananas",
+    "nombre": "Bowl de frutas",
+    "descripcion": "Frutas de estación, yoghurt natural y granola.",
+    "precio": 13500,
+    "etiquetas": [
+     "veggie"
+    ],
+    "orden": 4
+   },
+   {
+    "id": "tostada-francesa",
+    "categoria": "mananas",
+    "nombre": "Tostada francesa",
+    "descripcion": "Con frutas de estación y crema fresca.",
+    "precio": 15900,
+    "etiquetas": [],
+    "orden": 5
+   },
+   {
+    "id": "tostada-de-palta",
+    "categoria": "mananas",
+    "nombre": "Tostada de palta",
+    "descripcion": "Pan de campo o multicereal, palta, huevo poché y semillas.",
+    "precio": 13800,
+    "etiquetas": [
+     "veggie"
+    ],
+    "orden": 6
+   },
+   {
+    "id": "tostado-de-jamon-y-queso",
+    "categoria": "mananas",
+    "nombre": "Tostado de jamón y queso",
+    "descripcion": "En pan de campo, pita o multicereal.",
+    "precio": 13900,
+    "etiquetas": [],
+    "orden": 7
+   },
+   {
+    "id": "bruschetta-de-salmon",
+    "categoria": "mananas",
+    "nombre": "Bruschetta de salmón",
+    "descripcion": "Salmón ahumado, cream cheese, alcaparras, rúcula, palta y sésamo. En pan de campo.",
+    "precio": 22900,
+    "etiquetas": [
+     "casa"
+    ],
+    "orden": 8
+   },
+   {
+    "id": "hora-del-te",
+    "categoria": "tardes",
+    "nombre": "Hora del té",
+    "descripcion": "Para compartir: 2 infusiones, jugo de naranja, pastelería y mini sandwiches.",
+    "precio": 49500,
+    "etiquetas": [
+     "casa"
+    ],
+    "orden": 0,
+    "foto": "img/platos/tortas.webp"
+   },
+   {
+    "id": "dark-chocolate",
+    "categoria": "tortas",
+    "nombre": "Dark Chocolate",
+    "descripcion": "Porción.",
+    "precio": 12900,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "balcarce",
+    "categoria": "tortas",
+    "nombre": "Balcarce",
+    "descripcion": "Porción.",
+    "precio": 12900,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "carrot-cake",
+    "categoria": "tortas",
+    "nombre": "Carrot Cake",
+    "descripcion": "Porción.",
+    "precio": 12900,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "chocotorta",
+    "categoria": "tortas",
+    "nombre": "Chocotorta",
+    "descripcion": "Porción.",
+    "precio": 12900,
+    "etiquetas": [],
+    "orden": 3
+   },
+   {
+    "id": "cheesecake",
+    "categoria": "tortas",
+    "nombre": "Cheesecake",
+    "descripcion": "Porción, con frutos rojos.",
+    "precio": 12900,
+    "etiquetas": [
+     "casa"
+    ],
+    "orden": 4,
+    "foto": "img/platos/cheesecake.webp"
+   },
+   {
+    "id": "tarta-de-limon",
+    "categoria": "tortas",
+    "nombre": "Tarta de limón",
+    "descripcion": "Porción.",
+    "precio": 12900,
+    "etiquetas": [],
+    "orden": 5,
+    "foto": "img/platos/tortas.webp"
+   },
+   {
+    "id": "tarta-de-manzana",
+    "categoria": "tortas",
+    "nombre": "Tarta de manzana",
+    "descripcion": "Porción.",
+    "precio": 12900,
+    "etiquetas": [],
+    "orden": 6
+   },
+   {
+    "id": "frambuesa-y-limon",
+    "categoria": "tortas",
+    "nombre": "Frambuesa y limón",
+    "descripcion": "Porción.",
+    "precio": 12900,
+    "etiquetas": [],
+    "orden": 7
+   },
+   {
+    "id": "torta-entera",
+    "categoria": "tortas",
+    "nombre": "Torta entera",
+    "descripcion": "Cualquiera de nuestras tortas, entera. Consultanos sabores y tiempos.",
+    "precio": null,
+    "etiquetas": [],
+    "orden": 8
+   },
+   {
+    "id": "fresh-nordico",
+    "categoria": "sandwiches",
+    "nombre": "Fresh Nórdico",
+    "descripcion": "Salmón ahumado, palta, cream cheese, huevo y rúcula en pan bagel. Con fritas o mix verde.",
+    "precio": 31900,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "all-veggie",
+    "categoria": "sandwiches",
+    "nombre": "All Veggie",
+    "descripcion": "Berenjenas grilladas, espinaca, tomates secos y aderezo vegetal. Con fritas o mix verde.",
+    "precio": 19500,
+    "etiquetas": [
+     "veggie"
+    ],
+    "orden": 1
+   },
+   {
+    "id": "egg-muffin-alicia",
+    "categoria": "sandwiches",
+    "nombre": "Egg Muffin Alicia",
+    "descripcion": "Lomito, cheddar y huevo. Con fritas o mix verde.",
+    "precio": 19900,
+    "etiquetas": [
+     "casa"
+    ],
+    "orden": 2
+   },
+   {
+    "id": "pollo-crispy",
+    "categoria": "sandwiches",
+    "nombre": "Pollo crispy",
+    "descripcion": "Lechuga, aderezo César, palta y cebolla. Con fritas o mix verde.",
+    "precio": 25900,
+    "etiquetas": [],
+    "orden": 3
+   },
+   {
+    "id": "mortadela",
+    "categoria": "sandwiches",
+    "nombre": "Mortadela",
+    "descripcion": "Con pistacho, pesto, stracciatella y rúcula en focaccia. Con fritas o mix verde.",
+    "precio": 23500,
+    "etiquetas": [],
+    "orden": 4
+   },
+   {
+    "id": "medialuna",
+    "categoria": "panaderia",
+    "nombre": "Medialuna",
+    "descripcion": "",
+    "precio": 3000,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "medialuna-j-q",
+    "categoria": "panaderia",
+    "nombre": "Medialuna J/Q",
+    "descripcion": "Con jamón y queso.",
+    "precio": 7500,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "scon-dulce",
+    "categoria": "panaderia",
+    "nombre": "Scon dulce",
+    "descripcion": "",
+    "precio": 4200,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "budin-de-limon",
+    "categoria": "panaderia",
+    "nombre": "Budín de limón",
+    "descripcion": "",
+    "precio": 5800,
+    "etiquetas": [],
+    "orden": 3
+   },
+   {
+    "id": "scon-de-queso",
+    "categoria": "panaderia",
+    "nombre": "Scon de queso",
+    "descripcion": "",
+    "precio": 4800,
+    "etiquetas": [],
+    "orden": 4
+   },
+   {
+    "id": "nuez-y-choco-blanco",
+    "categoria": "pasteleria",
+    "nombre": "Nuez y choco blanco",
+    "descripcion": "",
+    "precio": 5900,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "muffin",
+    "categoria": "pasteleria",
+    "nombre": "Muffin",
+    "descripcion": "Banana, dulce de leche y coco.",
+    "precio": 5900,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "muffin-de-chocolate",
+    "categoria": "pasteleria",
+    "nombre": "Muffin de chocolate",
+    "descripcion": "",
+    "precio": 5900,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "cookie-de-nutella",
+    "categoria": "pasteleria",
+    "nombre": "Cookie de Nutella",
+    "descripcion": "",
+    "precio": 5900,
+    "etiquetas": [],
+    "orden": 3
+   },
+   {
+    "id": "chocotorta-sin-tacc",
+    "categoria": "sin-tacc",
+    "nombre": "Chocotorta sin TACC",
+    "descripcion": "Porción.",
+    "precio": 12900,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "cheesecake-sin-tacc",
+    "categoria": "sin-tacc",
+    "nombre": "Cheesecake sin TACC",
+    "descripcion": "Porción.",
+    "precio": 12900,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "tiramisu-sin-tacc",
+    "categoria": "sin-tacc",
+    "nombre": "Tiramisú sin TACC",
+    "descripcion": "Porción.",
+    "precio": 12900,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "rabas",
+    "categoria": "tapeo",
+    "nombre": "Rabas",
+    "descripcion": "Con alioli.",
+    "precio": 22500,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "langostinos-crispy",
+    "categoria": "tapeo",
+    "nombre": "Langostinos crispy",
+    "descripcion": "Con guacamole.",
+    "precio": 22500,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "picada-alicia",
+    "categoria": "tapeo",
+    "nombre": "Picada Alicia",
+    "descripcion": "Prosciutto gran reserva, lomo horneado con hierbas, salame fuet, leberwurst casero, brie con miel, queso azul y gruyère.",
+    "precio": 44500,
+    "etiquetas": [
+     "casa"
+    ],
+    "orden": 2
+   },
+   {
+    "id": "seleccion-charcuterie",
+    "categoria": "tapeo",
+    "nombre": "Selección charcuterie",
+    "descripcion": "Prosciutto gran reserva, lomo horneado con hierbas, salame fuet y leberwurst casero.",
+    "precio": 26500,
+    "etiquetas": [],
+    "orden": 3
+   },
+   {
+    "id": "seleccion-quesos",
+    "categoria": "tapeo",
+    "nombre": "Selección quesos",
+    "descripcion": "Brie, queso azul y gruyère.",
+    "precio": 28500,
+    "etiquetas": [
+     "veggie"
+    ],
+    "orden": 4
+   },
+   {
+    "id": "papas-fritas",
+    "categoria": "tapeo",
+    "nombre": "Papas fritas",
+    "descripcion": "",
+    "precio": 11000,
+    "etiquetas": [
+     "veggie"
+    ],
+    "orden": 5
+   },
+   {
+    "id": "langostinos",
+    "categoria": "entradas",
+    "nombre": "Langostinos",
+    "descripcion": "Con guacamole.",
+    "precio": 21500,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "tortilla",
+    "categoria": "entradas",
+    "nombre": "Tortilla",
+    "descripcion": "Con alioli azafranado.",
+    "precio": 19500,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "rabas-entradas",
+    "categoria": "entradas",
+    "nombre": "Rabas",
+    "descripcion": "Con alioli.",
+    "precio": 21500,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "bocaditos-de-pollo",
+    "categoria": "entradas",
+    "nombre": "Bocaditos de pollo",
+    "descripcion": "",
+    "precio": 14500,
+    "etiquetas": [],
+    "orden": 3
+   },
+   {
+    "id": "burratina",
+    "categoria": "entradas",
+    "nombre": "Burratina",
+    "descripcion": "Esfera de melón, tomates asados, jamón crudo y tapenade.",
+    "precio": 24900,
+    "etiquetas": [],
+    "orden": 4
+   },
+   {
+    "id": "ensalada-alicia",
+    "categoria": "ensaladas",
+    "nombre": "Ensalada Alicia",
+    "descripcion": "Mix de verdes, ciruelas asadas, queso halloumi, castañas, cherries confitados y vinagreta de miel y pomelo.",
+    "precio": 25900,
+    "etiquetas": [
+     "casa",
+     "veggie"
+    ],
+    "orden": 0,
+    "foto": "img/platos/ensaladas.webp"
+   },
+   {
+    "id": "cobb",
+    "categoria": "ensaladas",
+    "nombre": "Cobb",
+    "descripcion": "Mix de verdes, pollo asado, palta, queso azul, cherry y choclo.",
+    "precio": 24900,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "caesar",
+    "categoria": "ensaladas",
+    "nombre": "Caesar",
+    "descripcion": "Mix de verdes, pollo asado, crutones de pan y dressing Caesar.",
+    "precio": 26900,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "ensalada-salmon",
+    "categoria": "ensaladas",
+    "nombre": "Ensalada Salmón",
+    "descripcion": "Verdes y rúcula, salmón gravlax, huevo a baja temperatura, palta, semillas y cream cheese.",
+    "precio": 32900,
+    "etiquetas": [],
+    "orden": 3,
+    "foto": "img/platos/ensalada-salmon.webp"
+   },
+   {
+    "id": "extra-langostinos",
+    "categoria": "ensaladas",
+    "nombre": "Extra langostinos",
+    "descripcion": "Para agregar a tu ensalada.",
+    "precio": 4900,
+    "etiquetas": [],
+    "orden": 4
+   },
+   {
+    "id": "extra-salmon-ahumado",
+    "categoria": "ensaladas",
+    "nombre": "Extra salmón ahumado",
+    "descripcion": "Para agregar a tu ensalada.",
+    "precio": 7500,
+    "etiquetas": [],
+    "orden": 5
+   },
+   {
+    "id": "extra-jamon-crudo",
+    "categoria": "ensaladas",
+    "nombre": "Extra jamón crudo",
+    "descripcion": "Para agregar a tu ensalada.",
+    "precio": 3500,
+    "etiquetas": [],
+    "orden": 6
+   },
+   {
+    "id": "extra-pollo",
+    "categoria": "ensaladas",
+    "nombre": "Extra pollo",
+    "descripcion": "Para agregar a tu ensalada.",
+    "precio": 2600,
+    "etiquetas": [],
+    "orden": 7
+   },
+   {
+    "id": "extra-palta",
+    "categoria": "ensaladas",
+    "nombre": "Extra palta",
+    "descripcion": "Para agregar a tu ensalada.",
+    "precio": 2500,
+    "etiquetas": [],
+    "orden": 8
+   },
+   {
+    "id": "entrana",
+    "categoria": "carnes",
+    "nombre": "Entraña",
+    "descripcion": "",
+    "precio": 52000,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "ojo-de-bife",
+    "categoria": "carnes",
+    "nombre": "Ojo de bife",
+    "descripcion": "A la plancha de hierro.",
+    "precio": 42000,
+    "etiquetas": [
+     "casa"
+    ],
+    "orden": 1,
+    "foto": "img/platos/ojo-de-bife.webp"
+   },
+   {
+    "id": "lomo",
+    "categoria": "carnes",
+    "nombre": "Lomo",
+    "descripcion": "",
+    "precio": 39000,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "truchon-patagonico",
+    "categoria": "carnes",
+    "nombre": "Truchón patagónico",
+    "descripcion": "",
+    "precio": 34000,
+    "etiquetas": [],
+    "orden": 3
+   },
+   {
+    "id": "pesca-blanca-del-dia",
+    "categoria": "carnes",
+    "nombre": "Pesca blanca del día",
+    "descripcion": "",
+    "precio": 26000,
+    "etiquetas": [],
+    "orden": 4
+   },
+   {
+    "id": "guarniciones",
+    "categoria": "carnes",
+    "nombre": "Guarniciones",
+    "descripcion": "Papas fritas, puré de papa o calabaza, chambotta, frittata de vegetales o rúcula, parmesano, tomates secos y olivas negras.",
+    "precio": 9500,
+    "etiquetas": [],
+    "orden": 5,
+    "foto": "img/platos/guarniciones.webp"
+   },
+   {
+    "id": "chicken-parmesan",
+    "categoria": "cocina",
+    "nombre": "Chicken parmesan",
+    "descripcion": "Panko, pomodoro, mozzarella y spaghetti Alfredo.",
+    "precio": 34500,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "ribs-bbq",
+    "categoria": "cocina",
+    "nombre": "Ribs BBQ",
+    "descripcion": "BBQ casera, papas fritas y coleslaw.",
+    "precio": 35000,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "milanesa-de-bife",
+    "categoria": "cocina",
+    "nombre": "Milanesa de bife",
+    "descripcion": "A la napolitana con papas rotas.",
+    "precio": 37000,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "risotto-de-hongos",
+    "categoria": "cocina",
+    "nombre": "Risotto de hongos",
+    "descripcion": "Caldo oscuro, hongos asados y provenzal de avellanas.",
+    "precio": 33000,
+    "etiquetas": [
+     "veggie"
+    ],
+    "orden": 3,
+    "foto": "img/platos/risotto.webp"
+   },
+   {
+    "id": "arroz-espanol",
+    "categoria": "cocina",
+    "nombre": "Arroz español",
+    "descripcion": "Frutos de mar, azafrán, perejil y limón.",
+    "precio": 36800,
+    "etiquetas": [
+     "casa"
+    ],
+    "orden": 4,
+    "foto": "img/platos/arroz.webp"
+   },
+   {
+    "id": "gnocchi",
+    "categoria": "cocina",
+    "nombre": "Gnocchi",
+    "descripcion": "Crema de espinaca gratinada.",
+    "precio": 29900,
+    "etiquetas": [
+     "veggie"
+    ],
+    "orden": 5,
+    "foto": "img/platos/gnocchi.webp"
+   },
+   {
+    "id": "linguini-mediterraneo",
+    "categoria": "cocina",
+    "nombre": "Linguini mediterráneo",
+    "descripcion": "Gambas, ajo confitado y oliva.",
+    "precio": 29900,
+    "etiquetas": [],
+    "orden": 6,
+    "foto": "img/platos/linguini.webp"
+   },
+   {
+    "id": "ravioles-de-verdura",
+    "categoria": "cocina",
+    "nombre": "Ravioles de verdura",
+    "descripcion": "Pomodoro italiano, albahaca y parmesano.",
+    "precio": 29000,
+    "etiquetas": [
+     "veggie"
+    ],
+    "orden": 7,
+    "foto": "img/platos/ravioles.webp"
+   },
+   {
+    "id": "agnolotti-de-osobuco",
+    "categoria": "cocina",
+    "nombre": "Agnolotti de osobuco",
+    "descripcion": "Caldo de hongos, arvejas y crema fresca.",
+    "precio": 31000,
+    "etiquetas": [
+     "casa"
+    ],
+    "orden": 8,
+    "foto": "img/platos/agnolotti.webp"
+   },
+   {
+    "id": "milanesa-kids",
+    "categoria": "kids",
+    "nombre": "Milanesa kids",
+    "descripcion": "De peceto con papas fritas o puré.",
+    "precio": 22500,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "penne-rigate",
+    "categoria": "kids",
+    "nombre": "Penne rigate",
+    "descripcion": "Pomodoro o crema.",
+    "precio": 22500,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "pollo-grill",
+    "categoria": "kids",
+    "nombre": "Pollo grill",
+    "descripcion": "Pechuga grillada con papas fritas o puré.",
+    "precio": 22500,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "volcan-de-chocolate",
+    "categoria": "postres",
+    "nombre": "Volcán de chocolate",
+    "descripcion": "Helado de crema y praliné de frutos secos.",
+    "precio": 16500,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "volcan-de-dulce-de-leche",
+    "categoria": "postres",
+    "nombre": "Volcán de dulce de leche",
+    "descripcion": "Salsa de chocolate, banana asada y helado de coco.",
+    "precio": 16500,
+    "etiquetas": [
+     "casa"
+    ],
+    "orden": 1
+   },
+   {
+    "id": "mousse-oscura",
+    "categoria": "postres",
+    "nombre": "Mousse oscura",
+    "descripcion": "De chocolate.",
+    "precio": 16500,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "tiramisu",
+    "categoria": "postres",
+    "nombre": "Tiramisú",
+    "descripcion": "Vainillas al café con licor Borghetti y crema de mascarpone.",
+    "precio": 16500,
+    "etiquetas": [],
+    "orden": 3
+   },
+   {
+    "id": "omelette-surprise",
+    "categoria": "postres",
+    "nombre": "Omelette surprise",
+    "descripcion": "Helado de sambayón, dulce de leche, frutillas y merengue gratinado.",
+    "precio": 16500,
+    "etiquetas": [],
+    "orden": 4
+   },
+   {
+    "id": "merengatta",
+    "categoria": "postres",
+    "nombre": "Merengatta",
+    "descripcion": "Fruta de estación, almíbar de menta y canela, crema americana y merengue.",
+    "precio": 16500,
+    "etiquetas": [],
+    "orden": 5
+   },
+   {
+    "id": "flan-de-dulce-de-leche",
+    "categoria": "postres",
+    "nombre": "Flan de dulce de leche",
+    "descripcion": "Con crema montada.",
+    "precio": 16500,
+    "etiquetas": [],
+    "orden": 6
+   },
+   {
+    "id": "helado",
+    "categoria": "postres",
+    "nombre": "Helado",
+    "descripcion": "",
+    "precio": 12500,
+    "etiquetas": [],
+    "orden": 7
+   },
+   {
+    "id": "gaseosa",
+    "categoria": "bebidas",
+    "nombre": "Gaseosa",
+    "descripcion": "",
+    "precio": 4900,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "agua-con-o-sin-gas",
+    "categoria": "bebidas",
+    "nombre": "Agua con o sin gas",
+    "descripcion": "",
+    "precio": 4900,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "agua-saborizada",
+    "categoria": "bebidas",
+    "nombre": "Agua saborizada",
+    "descripcion": "",
+    "precio": 4900,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "espresso",
+    "categoria": "cafeteria",
+    "nombre": "Espresso",
+    "descripcion": "",
+    "precio": 4700,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "cortado",
+    "categoria": "cafeteria",
+    "nombre": "Cortado",
+    "descripcion": "",
+    "precio": 4700,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "macchiato",
+    "categoria": "cafeteria",
+    "nombre": "Macchiato",
+    "descripcion": "",
+    "precio": 4700,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "cafe-en-jarrito",
+    "categoria": "cafeteria",
+    "nombre": "Café en jarrito",
+    "descripcion": "",
+    "precio": 5400,
+    "etiquetas": [],
+    "orden": 3
+   },
+   {
+    "id": "cortado-en-jarrito",
+    "categoria": "cafeteria",
+    "nombre": "Cortado en jarrito",
+    "descripcion": "",
+    "precio": 5400,
+    "etiquetas": [],
+    "orden": 4
+   },
+   {
+    "id": "lagrima",
+    "categoria": "cafeteria",
+    "nombre": "Lágrima",
+    "descripcion": "",
+    "precio": 4700,
+    "etiquetas": [],
+    "orden": 5
+   },
+   {
+    "id": "lagrima-doble",
+    "categoria": "cafeteria",
+    "nombre": "Lágrima doble",
+    "descripcion": "",
+    "precio": 5700,
+    "etiquetas": [],
+    "orden": 6
+   },
+   {
+    "id": "te",
+    "categoria": "cafeteria",
+    "nombre": "Té",
+    "descripcion": "",
+    "precio": 3900,
+    "etiquetas": [],
+    "orden": 7
+   },
+   {
+    "id": "espresso-doble",
+    "categoria": "cafeteria",
+    "nombre": "Espresso doble",
+    "descripcion": "",
+    "precio": 6200,
+    "etiquetas": [],
+    "orden": 8
+   },
+   {
+    "id": "caffe-latte",
+    "categoria": "cafeteria",
+    "nombre": "Caffè latte",
+    "descripcion": "",
+    "precio": 6200,
+    "etiquetas": [],
+    "orden": 9
+   },
+   {
+    "id": "cappuccino",
+    "categoria": "cafeteria",
+    "nombre": "Cappuccino",
+    "descripcion": "",
+    "precio": 6200,
+    "etiquetas": [],
+    "orden": 10
+   },
+   {
+    "id": "cafe-alicia",
+    "categoria": "cafeteria",
+    "nombre": "Café Alicia",
+    "descripcion": "",
+    "precio": 6500,
+    "etiquetas": [
+     "casa"
+    ],
+    "orden": 11
+   },
+   {
+    "id": "submarino",
+    "categoria": "cafeteria",
+    "nombre": "Submarino",
+    "descripcion": "",
+    "precio": 6200,
+    "etiquetas": [],
+    "orden": 12
+   },
+   {
+    "id": "vaso-de-leche",
+    "categoria": "cafeteria",
+    "nombre": "Vaso de leche",
+    "descripcion": "",
+    "precio": 3300,
+    "etiquetas": [],
+    "orden": 13
+   },
+   {
+    "id": "tazon-caffe-latte",
+    "categoria": "cafeteria",
+    "nombre": "Tazón caffè latte",
+    "descripcion": "",
+    "precio": 6700,
+    "etiquetas": [],
+    "orden": 14
+   },
+   {
+    "id": "tazon-cappuccino",
+    "categoria": "cafeteria",
+    "nombre": "Tazón cappuccino",
+    "descripcion": "",
+    "precio": 6700,
+    "etiquetas": [],
+    "orden": 15
+   },
+   {
+    "id": "adicional-crema",
+    "categoria": "cafeteria",
+    "nombre": "Adicional crema",
+    "descripcion": "",
+    "precio": 600,
+    "etiquetas": [],
+    "orden": 16
+   },
+   {
+    "id": "adicional-leche-de-almendras",
+    "categoria": "cafeteria",
+    "nombre": "Adicional leche de almendras",
+    "descripcion": "",
+    "precio": 700,
+    "etiquetas": [],
+    "orden": 17
+   },
+   {
+    "id": "alicia-blend",
+    "categoria": "te",
+    "nombre": "Alicia Blend",
+    "descripcion": "Té negro Ceylon con vainillas, cacao, naranjitas tostadas y frutos rojos.",
+    "precio": 5900,
+    "etiquetas": [
+     "casa"
+    ],
+    "orden": 0
+   },
+   {
+    "id": "english-breakfast",
+    "categoria": "te",
+    "nombre": "English Breakfast",
+    "descripcion": "Blend de cosechas premium de India, Ceylon y China.",
+    "precio": 5900,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "thai-wind",
+    "categoria": "te",
+    "nombre": "Thai Wind",
+    "descripcion": "Té verde del sur de Shanghái con ananá caramelizado y coco rallado.",
+    "precio": 5900,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "tea-calm",
+    "categoria": "te",
+    "nombre": "Tea Calm",
+    "descripcion": "Verbena, manzanilla, cascaritas de naranja y clementinas. Digestivo y relajante.",
+    "precio": 5900,
+    "etiquetas": [],
+    "orden": 3
+   },
+   {
+    "id": "jugo-de-naranja",
+    "categoria": "jugos",
+    "nombre": "Jugo de naranja",
+    "descripcion": "",
+    "precio": 6500,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "jugo-de-pomelo",
+    "categoria": "jugos",
+    "nombre": "Jugo de pomelo",
+    "descripcion": "",
+    "precio": 6500,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "jugo-de-frutos-rojos",
+    "categoria": "jugos",
+    "nombre": "Jugo de frutos rojos",
+    "descripcion": "",
+    "precio": 6500,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "naranja-zanahoria-y-jengibre",
+    "categoria": "jugos",
+    "nombre": "Naranja, zanahoria y jengibre",
+    "descripcion": "",
+    "precio": 6500,
+    "etiquetas": [],
+    "orden": 3
+   },
+   {
+    "id": "limonada-clasica",
+    "categoria": "jugos",
+    "nombre": "Limonada clásica",
+    "descripcion": "",
+    "precio": 6500,
+    "etiquetas": [],
+    "orden": 4
+   },
+   {
+    "id": "limonada-fruit",
+    "categoria": "jugos",
+    "nombre": "Limonada fruit",
+    "descripcion": "",
+    "precio": 6500,
+    "etiquetas": [],
+    "orden": 5
+   },
+   {
+    "id": "limonada-menta-y-jengibre",
+    "categoria": "jugos",
+    "nombre": "Limonada menta y jengibre",
+    "descripcion": "",
+    "precio": 6500,
+    "etiquetas": [],
+    "orden": 6
+   },
+   {
+    "id": "pomelada-menta-y-almibar",
+    "categoria": "jugos",
+    "nombre": "Pomelada menta y almíbar",
+    "descripcion": "",
+    "precio": 6500,
+    "etiquetas": [],
+    "orden": 7
+   },
+   {
+    "id": "pomelada-de-frutos-rojos",
+    "categoria": "jugos",
+    "nombre": "Pomelada de frutos rojos",
+    "descripcion": "",
+    "precio": 6500,
+    "etiquetas": [],
+    "orden": 8
+   },
+   {
+    "id": "licuado-con-agua-o-leche",
+    "categoria": "jugos",
+    "nombre": "Licuado con agua o leche",
+    "descripcion": "",
+    "precio": 8300,
+    "etiquetas": [],
+    "orden": 9
+   },
+   {
+    "id": "licuado-con-leche-de-almendras",
+    "categoria": "jugos",
+    "nombre": "Licuado con leche de almendras",
+    "descripcion": "",
+    "precio": 8300,
+    "etiquetas": [],
+    "orden": 10
+   },
+   {
+    "id": "stella-artois-pure-gold-330cc",
+    "categoria": "cervezas",
+    "nombre": "Stella Artois Pure Gold 330cc",
+    "descripcion": "",
+    "precio": 5000,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "stella-artois-tirada-330cc",
+    "categoria": "cervezas",
+    "nombre": "Stella Artois tirada 330cc",
+    "descripcion": "",
+    "precio": 6700,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "stella-artois-tirada-500cc",
+    "categoria": "cervezas",
+    "nombre": "Stella Artois tirada 500cc",
+    "descripcion": "",
+    "precio": 7400,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "stella-artois-sin-alcohol-330cc",
+    "categoria": "cervezas",
+    "nombre": "Stella Artois sin alcohol 330cc",
+    "descripcion": "",
+    "precio": 5400,
+    "etiquetas": [],
+    "orden": 3
+   },
+   {
+    "id": "patagonia-amber-473cc",
+    "categoria": "cervezas",
+    "nombre": "Patagonia Amber 473cc",
+    "descripcion": "Lata.",
+    "precio": 7400,
+    "etiquetas": [],
+    "orden": 4
+   },
+   {
+    "id": "patagonia-bohemian",
+    "categoria": "cervezas",
+    "nombre": "Patagonia Bohemian",
+    "descripcion": "Lata.",
+    "precio": 7400,
+    "etiquetas": [],
+    "orden": 5
+   },
+   {
+    "id": "patagonia-24-7-473cc",
+    "categoria": "cervezas",
+    "nombre": "Patagonia 24.7 473cc",
+    "descripcion": "Lata.",
+    "precio": 7400,
+    "etiquetas": [],
+    "orden": 6
+   },
+   {
+    "id": "corona-porron-330cc",
+    "categoria": "cervezas",
+    "nombre": "Corona porrón 330cc",
+    "descripcion": "",
+    "precio": 7500,
+    "etiquetas": [],
+    "orden": 7
+   },
+   {
+    "id": "corona-sin-alcohol-330cc",
+    "categoria": "cervezas",
+    "nombre": "Corona sin alcohol 330cc",
+    "descripcion": "",
+    "precio": 7500,
+    "etiquetas": [],
+    "orden": 8
+   },
+   {
+    "id": "michelob-porron-275cc",
+    "categoria": "cervezas",
+    "nombre": "Michelob porrón 275cc",
+    "descripcion": "",
+    "precio": 5700,
+    "etiquetas": [],
+    "orden": 9
+   },
+   {
+    "id": "jarra-alicia",
+    "categoria": "tragos-alicia",
+    "nombre": "Jarra Alicia",
+    "descripcion": "Gin Blu, Cynar, pomelo, menta, canela y tónica.",
+    "precio": 21000,
+    "etiquetas": [
+     "casa"
+    ],
+    "orden": 0
+   },
+   {
+    "id": "mojito-pasion",
+    "categoria": "tragos-alicia",
+    "nombre": "Mojito pasión",
+    "descripcion": "Ron, menta, lima, frutos rojos y gaseosa lima.",
+    "precio": 14000,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "tropical-city",
+    "categoria": "tragos-alicia",
+    "nombre": "Tropical City",
+    "descripcion": "Ron, vino blanco, ananá, limón y frutos rojos.",
+    "precio": 14000,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "cielo-de-malibu",
+    "categoria": "tragos-alicia",
+    "nombre": "Cielo de Malibu",
+    "descripcion": "Malibu, ron, Blue Curaçao, cordial de naranja, ananá y granadina.",
+    "precio": 14000,
+    "etiquetas": [],
+    "orden": 3
+   },
+   {
+    "id": "caribbean-sun",
+    "categoria": "tragos-alicia",
+    "nombre": "Caribbean Sun",
+    "descripcion": "Pisco, limón, ananá, maracuyá y syrup de canela.",
+    "precio": 14000,
+    "etiquetas": [],
+    "orden": 4
+   },
+   {
+    "id": "alicia-spritz",
+    "categoria": "tragos-alicia",
+    "nombre": "Alicia Spritz",
+    "descripcion": "Aperol, gin, durazno, lemongrass y champagne.",
+    "precio": 14000,
+    "etiquetas": [
+     "casa"
+    ],
+    "orden": 5
+   },
+   {
+    "id": "tropical-caipi",
+    "categoria": "tragos-alicia",
+    "nombre": "Tropical Caipi",
+    "descripcion": "Vodka Sernova fresh citrus, maracuyá, mango, lima y azúcar.",
+    "precio": 14000,
+    "etiquetas": [],
+    "orden": 6
+   },
+   {
+    "id": "pomelo-gin",
+    "categoria": "tragos-alicia",
+    "nombre": "Pomelo Gin",
+    "descripcion": "Gin Beefeater Pink, pomelo, syrup de romero, vino rosso y tónica.",
+    "precio": 14000,
+    "etiquetas": [],
+    "orden": 7
+   },
+   {
+    "id": "summer-mojito",
+    "categoria": "tragos-alicia",
+    "nombre": "Summer Mojito",
+    "descripcion": "Frutilla, limón, ron y Chandon Extra Brut.",
+    "precio": 14000,
+    "etiquetas": [],
+    "orden": 8
+   },
+   {
+    "id": "caipi-bowl",
+    "categoria": "tragos-alicia",
+    "nombre": "Caipi Bowl",
+    "descripcion": "Vodka, lima, frutilla, almíbar, albahaca y cordial de naranja.",
+    "precio": 14000,
+    "etiquetas": [],
+    "orden": 9
+   },
+   {
+    "id": "baileys-kiss",
+    "categoria": "tragos-alicia",
+    "nombre": "Baileys Kiss",
+    "descripcion": "Baileys, crema americana, ron añejo y chocolate.",
+    "precio": 14000,
+    "etiquetas": [],
+    "orden": 10
+   },
+   {
+    "id": "tonic-pasion",
+    "categoria": "tragos-alicia",
+    "nombre": "Tonic Pasión",
+    "descripcion": "Gin Beefeater, maracuyá, simple syrup, limón, St-Germain y tónica.",
+    "precio": 14000,
+    "etiquetas": [],
+    "orden": 11
+   },
+   {
+    "id": "carpano-orange",
+    "categoria": "tragos-alicia",
+    "nombre": "Carpano Orange",
+    "descripcion": "Carpano Rosso y jugo de naranja.",
+    "precio": 14000,
+    "etiquetas": [],
+    "orden": 12
+   },
+   {
+    "id": "caipi-malibu",
+    "categoria": "tragos-alicia",
+    "nombre": "Caipi Malibu",
+    "descripcion": "Malibu, lima, naranja y azúcar.",
+    "precio": 14000,
+    "etiquetas": [],
+    "orden": 13
+   },
+   {
+    "id": "caipi-jager",
+    "categoria": "tragos-alicia",
+    "nombre": "Caipi Jäger",
+    "descripcion": "Jägermeister, lima, naranja y azúcar.",
+    "precio": 14000,
+    "etiquetas": [],
+    "orden": 14
+   },
+   {
+    "id": "caipi-absolut",
+    "categoria": "tragos-alicia",
+    "nombre": "Caipi Absolut",
+    "descripcion": "Vodka Absolut, lima y azúcar.",
+    "precio": 14000,
+    "etiquetas": [],
+    "orden": 15
+   },
+   {
+    "id": "aperol-spritz",
+    "categoria": "tragos-clasicos",
+    "nombre": "Aperol Spritz",
+    "descripcion": "",
+    "precio": 12000,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "cosmopolitan",
+    "categoria": "tragos-clasicos",
+    "nombre": "Cosmopolitan",
+    "descripcion": "",
+    "precio": 12000,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "old-fashioned",
+    "categoria": "tragos-clasicos",
+    "nombre": "Old Fashioned",
+    "descripcion": "",
+    "precio": 12000,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "fernet-con-cola",
+    "categoria": "tragos-clasicos",
+    "nombre": "Fernet con cola",
+    "descripcion": "",
+    "precio": 12000,
+    "etiquetas": [],
+    "orden": 3
+   },
+   {
+    "id": "margarita",
+    "categoria": "tragos-clasicos",
+    "nombre": "Margarita",
+    "descripcion": "",
+    "precio": 12000,
+    "etiquetas": [],
+    "orden": 4
+   },
+   {
+    "id": "mojito",
+    "categoria": "tragos-clasicos",
+    "nombre": "Mojito",
+    "descripcion": "",
+    "precio": 12000,
+    "etiquetas": [],
+    "orden": 5
+   },
+   {
+    "id": "sernova-orange",
+    "categoria": "tragos-clasicos",
+    "nombre": "Sernova Orange",
+    "descripcion": "",
+    "precio": 12000,
+    "etiquetas": [],
+    "orden": 6
+   },
+   {
+    "id": "manhattan",
+    "categoria": "tragos-clasicos",
+    "nombre": "Manhattan",
+    "descripcion": "",
+    "precio": 12000,
+    "etiquetas": [],
+    "orden": 7
+   },
+   {
+    "id": "negroni",
+    "categoria": "tragos-clasicos",
+    "nombre": "Negroni",
+    "descripcion": "",
+    "precio": 12000,
+    "etiquetas": [],
+    "orden": 8
+   },
+   {
+    "id": "bloody-mary",
+    "categoria": "tragos-clasicos",
+    "nombre": "Bloody Mary",
+    "descripcion": "",
+    "precio": 12000,
+    "etiquetas": [],
+    "orden": 9
+   },
+   {
+    "id": "cynar-julep",
+    "categoria": "tragos-clasicos",
+    "nombre": "Cynar Julep",
+    "descripcion": "",
+    "precio": 12000,
+    "etiquetas": [],
+    "orden": 10
+   },
+   {
+    "id": "cuba-libre",
+    "categoria": "tragos-clasicos",
+    "nombre": "Cuba Libre",
+    "descripcion": "",
+    "precio": 12000,
+    "etiquetas": [],
+    "orden": 11
+   },
+   {
+    "id": "pisco-sour",
+    "categoria": "tragos-clasicos",
+    "nombre": "Pisco Sour",
+    "descripcion": "",
+    "precio": 12000,
+    "etiquetas": [],
+    "orden": 12
+   },
+   {
+    "id": "gancia-batido",
+    "categoria": "tragos-clasicos",
+    "nombre": "Gancia batido",
+    "descripcion": "",
+    "precio": 12000,
+    "etiquetas": [],
+    "orden": 13
+   },
+   {
+    "id": "daiquiri",
+    "categoria": "tragos-clasicos",
+    "nombre": "Daiquiri",
+    "descripcion": "",
+    "precio": 12000,
+    "etiquetas": [],
+    "orden": 14
+   },
+   {
+    "id": "tom-collins",
+    "categoria": "tragos-clasicos",
+    "nombre": "Tom Collins",
+    "descripcion": "",
+    "precio": 12000,
+    "etiquetas": [],
+    "orden": 15
+   },
+   {
+    "id": "dry-martini",
+    "categoria": "tragos-clasicos",
+    "nombre": "Dry Martini",
+    "descripcion": "",
+    "precio": 12000,
+    "etiquetas": [],
+    "orden": 16
+   },
+   {
+    "id": "campari-tonic",
+    "categoria": "tragos-clasicos",
+    "nombre": "Campari Tonic",
+    "descripcion": "",
+    "precio": 12000,
+    "etiquetas": [],
+    "orden": 17
+   },
+   {
+    "id": "caipiroska",
+    "categoria": "tragos-clasicos",
+    "nombre": "Caipiroska",
+    "descripcion": "",
+    "precio": 12000,
+    "etiquetas": [],
+    "orden": 18
+   },
+   {
+    "id": "caipirinha",
+    "categoria": "tragos-clasicos",
+    "nombre": "Caipirinha",
+    "descripcion": "",
+    "precio": 12000,
+    "etiquetas": [],
+    "orden": 19
+   },
+   {
+    "id": "gin-tonic-blu",
+    "categoria": "tragos-clasicos",
+    "nombre": "Gin Tonic Blu",
+    "descripcion": "",
+    "precio": 12000,
+    "etiquetas": [],
+    "orden": 20
+   },
+   {
+    "id": "gin-tonic-bombay",
+    "categoria": "tragos-clasicos",
+    "nombre": "Gin Tonic Bombay",
+    "descripcion": "",
+    "precio": 19300,
+    "etiquetas": [],
+    "orden": 21
+   },
+   {
+    "id": "gin-tonic-beefeater",
+    "categoria": "tragos-clasicos",
+    "nombre": "Gin Tonic Beefeater",
+    "descripcion": "",
+    "precio": 13000,
+    "etiquetas": [],
+    "orden": 22
+   },
+   {
+    "id": "gin-tonic-hendricks",
+    "categoria": "tragos-clasicos",
+    "nombre": "Gin Tonic Hendrick’s",
+    "descripcion": "",
+    "precio": 21500,
+    "etiquetas": [],
+    "orden": 23
+   },
+   {
+    "id": "gin-tonic-bulldog",
+    "categoria": "tragos-clasicos",
+    "nombre": "Gin Tonic Bulldog",
+    "descripcion": "",
+    "precio": 19800,
+    "etiquetas": [],
+    "orden": 24
+   },
+   {
+    "id": "gin-tonic-tanqueray",
+    "categoria": "tragos-clasicos",
+    "nombre": "Gin Tonic Tanqueray",
+    "descripcion": "",
+    "precio": 15500,
+    "etiquetas": [],
+    "orden": 25
+   },
+   {
+    "id": "glenfiddich",
+    "categoria": "whisky",
+    "nombre": "Glenfiddich",
+    "descripcion": "",
+    "precio": 19500,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "jack-daniels-tennessee",
+    "categoria": "whisky",
+    "nombre": "Jack Daniel’s Tennessee",
+    "descripcion": "",
+    "precio": 9900,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "jim-beam",
+    "categoria": "whisky",
+    "nombre": "Jim Beam",
+    "descripcion": "",
+    "precio": 7200,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "j-b",
+    "categoria": "whisky",
+    "nombre": "J&B",
+    "descripcion": "",
+    "precio": 5900,
+    "etiquetas": [],
+    "orden": 3
+   },
+   {
+    "id": "chivas-12-anos",
+    "categoria": "whisky",
+    "nombre": "Chivas 12 años",
+    "descripcion": "",
+    "precio": 8800,
+    "etiquetas": [],
+    "orden": 4
+   },
+   {
+    "id": "johnnie-walker-red",
+    "categoria": "whisky",
+    "nombre": "Johnnie Walker Red",
+    "descripcion": "",
+    "precio": 7600,
+    "etiquetas": [],
+    "orden": 5
+   },
+   {
+    "id": "johnnie-walker-black",
+    "categoria": "whisky",
+    "nombre": "Johnnie Walker Black",
+    "descripcion": "",
+    "precio": 11900,
+    "etiquetas": [],
+    "orden": 6
+   },
+   {
+    "id": "johnnie-walker-double-black",
+    "categoria": "whisky",
+    "nombre": "Johnnie Walker Double Black",
+    "descripcion": "",
+    "precio": 14900,
+    "etiquetas": [],
+    "orden": 7
+   },
+   {
+    "id": "ballantines",
+    "categoria": "whisky",
+    "nombre": "Ballantine’s",
+    "descripcion": "",
+    "precio": 4900,
+    "etiquetas": [],
+    "orden": 8
+   },
+   {
+    "id": "the-famous-grouse",
+    "categoria": "whisky",
+    "nombre": "The Famous Grouse",
+    "descripcion": "",
+    "precio": 4900,
+    "etiquetas": [],
+    "orden": 9
+   },
+   {
+    "id": "malbec",
+    "categoria": "vino-copa",
+    "nombre": "Malbec",
+    "descripcion": "Por copa.",
+    "precio": 9900,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "cabernet-sauvignon",
+    "categoria": "vino-copa",
+    "nombre": "Cabernet Sauvignon",
+    "descripcion": "Por copa.",
+    "precio": 9900,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "pinot-noir",
+    "categoria": "vino-copa",
+    "nombre": "Pinot Noir",
+    "descripcion": "Por copa.",
+    "precio": 9900,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "chardonnay",
+    "categoria": "vino-copa",
+    "nombre": "Chardonnay",
+    "descripcion": "Por copa.",
+    "precio": 9900,
+    "etiquetas": [],
+    "orden": 3
+   },
+   {
+    "id": "rose",
+    "categoria": "vino-copa",
+    "nombre": "Rosé",
+    "descripcion": "Por copa.",
+    "precio": 9900,
+    "etiquetas": [],
+    "orden": 4
+   },
+   {
+    "id": "cabernet-franc",
+    "categoria": "vino-copa",
+    "nombre": "Cabernet Franc",
+    "descripcion": "Por copa.",
+    "precio": 9900,
+    "etiquetas": [],
+    "orden": 5
+   },
+   {
+    "id": "sauvignon-blanc",
+    "categoria": "vino-copa",
+    "nombre": "Sauvignon Blanc",
+    "descripcion": "Por copa.",
+    "precio": 9900,
+    "etiquetas": [],
+    "orden": 6
+   },
+   {
+    "id": "champagne",
+    "categoria": "vino-copa",
+    "nombre": "Champagne",
+    "descripcion": "Por copa.",
+    "precio": 9900,
+    "etiquetas": [],
+    "orden": 7
+   },
+   {
+    "id": "angelica-zapata-malbec-alta",
+    "categoria": "malbec",
+    "nombre": "Angélica Zapata Malbec Alta",
+    "descripcion": "Catena Zapata",
+    "precio": 58000,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "d-v-catena-malbec",
+    "categoria": "malbec",
+    "nombre": "D.V. Catena Malbec",
+    "descripcion": "Catena Zapata",
+    "precio": 46000,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "el-enemigo-malbec",
+    "categoria": "malbec",
+    "nombre": "El Enemigo Malbec",
+    "descripcion": "Bodega El Enemigo",
+    "precio": 42000,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "zaha-malbec",
+    "categoria": "malbec",
+    "nombre": "Zaha Malbec",
+    "descripcion": "Mil Suelos",
+    "precio": 39000,
+    "etiquetas": [],
+    "orden": 3
+   },
+   {
+    "id": "numina-malbec",
+    "categoria": "malbec",
+    "nombre": "Numina Malbec",
+    "descripcion": "Salentein",
+    "precio": 32000,
+    "etiquetas": [],
+    "orden": 4
+   },
+   {
+    "id": "stone-soil-malbec",
+    "categoria": "malbec",
+    "nombre": "Stone Soil Malbec",
+    "descripcion": "Manos Negras",
+    "precio": 27000,
+    "etiquetas": [],
+    "orden": 5
+   },
+   {
+    "id": "piattelli-reserve-malbec",
+    "categoria": "malbec",
+    "nombre": "Piattelli Reserve Malbec",
+    "descripcion": "Salta",
+    "precio": 27000,
+    "etiquetas": [],
+    "orden": 6
+   },
+   {
+    "id": "saint-felicien-malbec",
+    "categoria": "malbec",
+    "nombre": "Saint Felicien Malbec",
+    "descripcion": "Catena Zapata",
+    "precio": 27000,
+    "etiquetas": [],
+    "orden": 7
+   },
+   {
+    "id": "salentein-reserve-malbec",
+    "categoria": "malbec",
+    "nombre": "Salentein Reserve Malbec",
+    "descripcion": "Salentein",
+    "precio": 26000,
+    "etiquetas": [],
+    "orden": 8
+   },
+   {
+    "id": "nicasia-blend-de-malbec",
+    "categoria": "malbec",
+    "nombre": "Nicasia Blend de Malbec",
+    "descripcion": "Catena Zapata",
+    "precio": 24000,
+    "etiquetas": [],
+    "orden": 9
+   },
+   {
+    "id": "asa-nisi-masa-malbec",
+    "categoria": "malbec",
+    "nombre": "Asa Nisi Masa Malbec",
+    "descripcion": "Mundo Revés",
+    "precio": 24000,
+    "etiquetas": [],
+    "orden": 10
+   },
+   {
+    "id": "hey-malbec",
+    "categoria": "malbec",
+    "nombre": "Hey Malbec",
+    "descripcion": "Riccitelli Wines",
+    "precio": 24000,
+    "etiquetas": [],
+    "orden": 11
+   },
+   {
+    "id": "solito-va-malbec",
+    "categoria": "malbec",
+    "nombre": "Solito Va Malbec",
+    "descripcion": "Solito Va Wines",
+    "precio": 23000,
+    "etiquetas": [],
+    "orden": 12
+   },
+   {
+    "id": "manos-negras-malbec",
+    "categoria": "malbec",
+    "nombre": "Manos Negras Malbec",
+    "descripcion": "Manos Negras",
+    "precio": 23000,
+    "etiquetas": [],
+    "orden": 13
+   },
+   {
+    "id": "manos-negras-cabernet-sauvignon",
+    "categoria": "cabernet",
+    "nombre": "Manos Negras Cabernet Sauvignon",
+    "descripcion": "Manos Negras",
+    "precio": 23000,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "d-v-catena-cabernet-sauvignon",
+    "categoria": "cabernet",
+    "nombre": "D.V. Catena Cabernet Sauvignon",
+    "descripcion": "Catena Zapata",
+    "precio": 41000,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "angelica-zapata-cabernet-sauvignon",
+    "categoria": "cabernet",
+    "nombre": "Angélica Zapata Cabernet Sauvignon",
+    "descripcion": "Catena Zapata",
+    "precio": 49000,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "nicasia-cabernet-franc",
+    "categoria": "cabernet-franc",
+    "nombre": "Nicasia Cabernet Franc",
+    "descripcion": "Catena Zapata",
+    "precio": 24000,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "solito-va-cabernet-franc",
+    "categoria": "cabernet-franc",
+    "nombre": "Solito Va Cabernet Franc",
+    "descripcion": "Solito Va Wines",
+    "precio": 23000,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "casarena-estate-cabernet-franc",
+    "categoria": "cabernet-franc",
+    "nombre": "Casarena Estate Cabernet Franc",
+    "descripcion": "Casarena",
+    "precio": 21000,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "manos-negras-red-soil-pinot-noir",
+    "categoria": "pinot-noir",
+    "nombre": "Manos Negras Red Soil Pinot Noir",
+    "descripcion": "Manos Negras",
+    "precio": 28000,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "coincidir-pinot-noir",
+    "categoria": "pinot-noir",
+    "nombre": "Coincidir Pinot Noir",
+    "descripcion": "",
+    "precio": 26000,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "antro-pinot-noir",
+    "categoria": "pinot-noir",
+    "nombre": "Antro Pinot Noir",
+    "descripcion": "",
+    "precio": 22000,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "salentein-reserve-sauvignon-blanc",
+    "categoria": "blancos",
+    "nombre": "Salentein Reserve Sauvignon Blanc",
+    "descripcion": "Salentein",
+    "precio": 24000,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "angelica-zapata-chardonnay",
+    "categoria": "blancos",
+    "nombre": "Angélica Zapata Chardonnay",
+    "descripcion": "Catena Zapata",
+    "precio": 43000,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "d-v-catena-chardonnay",
+    "categoria": "blancos",
+    "nombre": "D.V. Catena Chardonnay",
+    "descripcion": "Catena Zapata",
+    "precio": 35000,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "manos-negras-chardonnay",
+    "categoria": "blancos",
+    "nombre": "Manos Negras Chardonnay",
+    "descripcion": "Manos Negras",
+    "precio": 21900,
+    "etiquetas": [],
+    "orden": 3
+   },
+   {
+    "id": "piattelli-torrontes",
+    "categoria": "blancos",
+    "nombre": "Piattelli Torrontés",
+    "descripcion": "Piattelli",
+    "precio": 23800,
+    "etiquetas": [],
+    "orden": 4
+   },
+   {
+    "id": "piattelli-rose",
+    "categoria": "rosados",
+    "nombre": "Piattelli Rosé",
+    "descripcion": "Piattelli",
+    "precio": 23800,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "hey-rose",
+    "categoria": "rosados",
+    "nombre": "Hey Rosé",
+    "descripcion": "Riccitelli Wines",
+    "precio": 23500,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "piattelli-natural-sweet",
+    "categoria": "rosados",
+    "nombre": "Piattelli Natural Sweet",
+    "descripcion": "Piattelli",
+    "precio": 22500,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "veuve-clicquot",
+    "categoria": "espumantes",
+    "nombre": "Veuve Clicquot",
+    "descripcion": "Luxury",
+    "precio": 315000,
+    "etiquetas": [],
+    "orden": 0
+   },
+   {
+    "id": "moet-chandon-brut-imperial",
+    "categoria": "espumantes",
+    "nombre": "Moët & Chandon Brut Impérial",
+    "descripcion": "Moët & Chandon",
+    "precio": 315000,
+    "etiquetas": [],
+    "orden": 1
+   },
+   {
+    "id": "rosell-boher-brut",
+    "categoria": "espumantes",
+    "nombre": "Rosell Boher Brut",
+    "descripcion": "Rosell Boher",
+    "precio": 65000,
+    "etiquetas": [],
+    "orden": 2
+   },
+   {
+    "id": "baron-b-extra-brut",
+    "categoria": "espumantes",
+    "nombre": "Baron B Extra Brut",
+    "descripcion": "Chandon",
+    "precio": 68000,
+    "etiquetas": [],
+    "orden": 3
+   },
+   {
+    "id": "alma-negra-brut-nature",
+    "categoria": "espumantes",
+    "nombre": "Alma Negra Brut Nature",
+    "descripcion": "Ernesto Catena",
+    "precio": 55000,
+    "etiquetas": [],
+    "orden": 4
+   },
+   {
+    "id": "casa-boher-extra-brut",
+    "categoria": "espumantes",
+    "nombre": "Casa Boher Extra Brut",
+    "descripcion": "Rosell Boher",
+    "precio": 42000,
+    "etiquetas": [],
+    "orden": 5
+   },
+   {
+    "id": "chandon-brut-nature",
+    "categoria": "espumantes",
+    "nombre": "Chandon Brut Nature",
+    "descripcion": "Chandon",
+    "precio": 36000,
+    "etiquetas": [],
+    "orden": 6
+   },
+   {
+    "id": "chandon-aperitif",
+    "categoria": "espumantes",
+    "nombre": "Chandon Apéritif",
+    "descripcion": "Chandon",
+    "precio": 36000,
+    "etiquetas": [],
+    "orden": 7
+   },
+   {
+    "id": "chandon-extra-brut",
+    "categoria": "espumantes",
+    "nombre": "Chandon Extra Brut",
+    "descripcion": "Chandon",
+    "precio": 36000,
+    "etiquetas": [],
+    "orden": 8
+   },
+   {
+    "id": "manos-negras-brut-nature",
+    "categoria": "espumantes",
+    "nombre": "Manos Negras Brut Nature",
+    "descripcion": "Manos Negras",
+    "precio": 28500,
+    "etiquetas": [],
+    "orden": 9
+   }
+  ]
+ },
+ "textos": {
+  "tuPedido": "Tu comanda",
+  "verPedido": "Comanda",
+  "agregar": "A la comanda",
+  "carritoVacio": "Comanda en blanco.",
+  "carritoVacioSub": "¿Una medialuna? Sumá algo de panadería o pastelería para llevar.",
+  "retiro": "Retiro en Asunción 4102",
+  "enviarPedido": "Pedir para retirar",
+  "pedidoListo": "Comanda enviada.",
+  "pedidoListoSub": "Tu código es {codigo}. Te esperamos en Asunción 4102: te avisamos por WhatsApp cuando esté lista.",
+  "waPedido": "Hola Alicia! Quiero hacer esta comanda para retirar:",
+  "waCodigo": "Comanda {codigo}",
+  "reservarMesa": "Guardame una mesa",
+  "confirmarReserva": "Confirmar reserva",
+  "comentario": "Algo para tener en cuenta (cumple, terraza, silla para bebé…)",
+  "masPersonas": "Para más de {n} personas escribinos por WhatsApp: armamos la mesa."
+ }
+}

@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="es" class="tarde">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alicia · Restaurante en Villa Devoto</title>
+<meta name="description" content="Alicia, Villa Devoto. Desayunos, almuerzos, la hora del té y cenas en una esquina de hormigón. Carta, cava de vinos y reservas online.">
+<meta name="theme-color" content="#F4F1EC">
+<meta property="og:title" content="Alicia · Villa Devoto">
+<meta property="og:description" content="De las 8:30 a la última copa. Carta, cava y reservas.">
+<meta property="og:image" content="img/local/fachada.webp">
+<link rel="icon" href="img/favicon.png">
+<script>
+  // intro y entradas: solo con JS y sin "reducir movimiento" (si no, todo se ve de una)
+  (function () {
+    var d = document.documentElement;
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('con-intro', 'con-revela');
+    // modo noche antes de pintar (así la intro ya sale oscura de noche)
+    var ba = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Argentina/Buenos_Aires' }));
+    var h = ba.getHours() * 60 + ba.getMinutes();
+    var m = new URLSearchParams(location.search).get('momento');
+    if (m === 'noche' || (!m && (h >= 1170 || h < 510))) { d.classList.remove('tarde'); d.classList.add('noche'); }
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cutive&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/logo.svg">
+<link rel="stylesheet" href="kit/kit.css?v=3">
+<link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
+<a class="saltar" href="#carta">Ir a la carta</a>
+
+<!-- ============ INTRO: la carta que se abre ============ -->
+<div class="intro" aria-hidden="true">
+  <div class="intro__hoja intro__hoja--arriba"></div>
+  <div class="intro__hoja intro__hoja--abajo"></div>
+  <div class="intro__centro">
+    <div class="intro__logo"><img src="img/logo.svg" alt="" class="logo-claro" width="352" height="125"><img src="img/logo-blanco.svg" alt="" class="logo-oscuro" width="352" height="125"></div>
+    <span class="intro__linea"></span>
+    <p class="intro__texto" data-intro-texto>Villa Devoto · desde las 8:30</p>
+  </div>
+</div>
+
+<!-- ============ BARRA (fija) ============ -->
+<header class="barra" id="inicio">
+  <div class="barra__in">
+    <nav class="barra__nav" aria-label="Secciones">
+      <a href="#carta">Carta</a>
+      <a href="#te">Hora del té</a>
+      <a href="#carta" data-ir-pagina="cava">Cava</a>
+      <a href="#esquina">La esquina</a>
+      <a href="#donde">Dónde</a>
+    </nav>
+    <a class="barra__logo" href="#inicio" aria-label="Alicia, inicio"><img src="img/logo.svg" alt="Alicia" width="352" height="125" class="logo-claro"><img src="img/logo-blanco.svg" alt="" width="352" height="125" class="logo-oscuro"></a>
+    <div class="barra__der">
+      <div class="lamparas" aria-hidden="true"><span class="lampara" style="--h:22px"></span><span class="lampara" style="--h:34px"></span><span class="lampara" style="--h:16px"></span></div>
+      <button type="button" class="boton boton--lleno boton--chico" data-kit-open="reservas">Reservar</button>
+      <button type="button" class="barra__menu" aria-expanded="false" aria-controls="menu-movil" aria-label="Abrir menú"><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="menu-movil" id="menu-movil" hidden>
+    <a href="#carta">Carta</a>
+    <a href="#te">Hora del té</a>
+    <a href="#carta" data-ir-pagina="cava">Cava de vinos</a>
+    <a href="#esquina">La esquina</a>
+    <a href="#reservas">Reservar mesa</a>
+    <a href="#donde">Dónde y cuándo</a>
+  </div>
+</header>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hoja hero" aria-labelledby="hero-t">
+    <div class="hero__texto">
+      <p class="hero__kicker" data-entra style="--d:0">Restaurante, pastelería y cava en Villa Devoto</p>
+      <h1 id="hero-t" class="hero__titulo" aria-label="De las 8:30 a la última copa.">
+        <span class="renglon"><span data-entra style="--d:1">De las 8:30</span></span>
+        <span class="renglon"><span data-entra style="--d:2">a la última</span></span>
+        <span class="renglon"><span data-entra style="--d:3">copa.</span></span>
+      </h1>
+      <p class="hero__bajada" data-momento-texto data-entra style="--d:5">Desayunos, almuerzos, la hora del té y cenas en una esquina de hormigón de Devoto. No cobramos cubierto.</p>
+      <div class="hero__ctas" data-entra style="--d:6">
+        <button type="button" class="boton boton--lleno" data-kit-open="reservas">Reservar mesa</button>
+        <a class="boton" href="#carta">Ver la carta</a>
+      </div>
+    </div>
+    <div class="hero__fotos">
+      <figure class="hero__foto hero__foto--grande" data-entra-foto style="--d:2">
+        <img data-slot="a" src="img/platos/cheesecake-mesa.webp" alt="Cheesecake con frutos rojos sobre mesa de madera" width="900" height="1125" fetchpriority="high">
+        <figcaption class="etiqueta" data-slot-pie="a">Cheesecake <span>$ 12.900</span></figcaption>
+      </figure>
+      <figure class="hero__foto" data-entra-foto style="--d:4"><img data-slot="b" src="img/local/salon-cobre.webp" alt="Salón con lámparas de cobre" width="1400" height="1750"></figure>
+      <figure class="hero__foto" data-entra-foto style="--d:5"><img data-slot="c" src="img/platos/tortas.webp" alt="Tortas de la merienda" width="640" height="960"></figure>
+    </div>
+    <div class="reloj">
+      <p class="reloj__ayuda" data-entra style="--d:7">Alicia cambia con la hora. Tocá un horario para verla:</p>
+      <div class="reloj__fila" role="group" aria-label="Servicios del día">
+        <button type="button" class="reloj__btn" data-momento="manana" data-entra style="--d:7"><span class="reloj__n">Desayunos</span><span class="reloj__h">8,30 a 11,30 hs.</span><span class="reloj__ahora">Ahora</span></button>
+        <button type="button" class="reloj__btn" data-momento="mediodia" data-entra style="--d:8"><span class="reloj__n">Almuerzo</span><span class="reloj__h">12,00 a 16,00 hs.</span><span class="reloj__ahora">Ahora</span></button>
+        <button type="button" class="reloj__btn" data-momento="tarde" data-entra style="--d:9"><span class="reloj__n">Meriendas</span><span class="reloj__h">16,00 a 19,30 hs.</span><span class="reloj__ahora">Ahora</span></button>
+        <button type="button" class="reloj__btn" data-momento="noche" data-entra style="--d:10"><span class="reloj__n">Cena</span><span class="reloj__h">Desde las 20,00 hs.</span><span class="reloj__ahora">Ahora</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CARTA ============ -->
+  <section class="hoja carta" id="carta" aria-labelledby="carta-t">
+    <div class="carta__cabeza">
+      <div>
+        <h2 id="carta-t" class="carta__titulo"><span class="maquina" data-maquina>La carta</span></h2>
+        <p class="carta__horas" data-pagina-horas></p>
+      </div>
+      <p class="carta__nota">No cobramos cubierto. 10% de descuento pagando en efectivo.</p>
+    </div>
+    <div class="paginas" role="tablist" aria-label="Páginas de la carta">
+      <button type="button" role="tab" class="pagina" data-pagina="manana" aria-selected="false"><b>Desayunos y meriendas</b><span>8,30 a 11,30 / 16 a 19,30</span></button>
+      <button type="button" role="tab" class="pagina" data-pagina="cocina" aria-selected="false"><b>Almuerzo y cena</b><span>12 a 16 / desde las 20</span></button>
+      <button type="button" role="tab" class="pagina" data-pagina="barra" aria-selected="false"><b>Barra</b><span>Café, té, jugos y tragos</span></button>
+      <button type="button" role="tab" class="pagina" data-pagina="cava" aria-selected="false"><b>Cava de vinos</b><span>40 etiquetas y por copa</span></button>
+    </div>
+    <div class="carta__cuerpo">
+      <nav class="indice" aria-label="Secciones de esta página" data-indice></nav>
+      <div class="carta__lista">
+        <div class="seccion-cabeza" data-seccion-cabeza aria-live="polite"></div>
+        <div data-kit="carta" class="carta__kit"></div>
+        <div class="carta__pasar" data-pasar></div>
+        <div class="cava" data-cava hidden>
+          <div class="cava__filtros" role="group" aria-label="Filtrar por cepa" data-cava-filtros></div>
+          <div class="cava__detalle" data-cava-detalle aria-live="polite">
+            <p class="cava__ayuda">Tocá una botella para sacarla del estante.</p>
+          </div>
+          <div class="cava__estante" data-cava-estante></div>
+          <div data-cava-copa></div>
+        </div>
+      </div>
+      <aside class="carta__marco" aria-hidden="true">
+        <figure class="marco">
+          <img data-marco-img src="img/platos/tortas.webp" alt="" decoding="async">
+          <figcaption class="etiqueta" data-marco-pie>Pasá por un plato con foto</figcaption>
+        </figure>
+        <p class="marco__ayuda">Pasá el mouse por un plato marcado con <span class="punto-foto" aria-hidden="true"></span> para ver su foto.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ HORA DEL TÉ ============ -->
+  <section class="hoja te" id="te" aria-labelledby="te-t">
+    <figure class="te__foto" data-revela="foto"><img src="img/platos/tortas.webp" alt="Porciones de torta de la merienda" loading="lazy" decoding="async" width="640" height="960"></figure>
+    <div class="te__texto">
+      <h2 id="te-t" class="titulo-seccion" data-tipea>La hora del té</h2>
+      <p class="te__precio" data-revela style="--d:1"><span>Para compartir</span><span>$ 49.500</span></p>
+      <p data-revela style="--d:2">Dos infusiones, jugo de naranja, pastelería y mini sandwiches. De 16,00 a 19,30 hs., con té en hebras de Tealosophy y el Alicia Blend de la casa.</p>
+      <p data-revela style="--d:3">Las tortas también se llevan: porciones de carrot cake, chocotorta, cheesecake, balcarce y más. Las enteras, a pedido.</p>
+      <div class="te__ctas" data-revela style="--d:4">
+        <button type="button" class="boton boton--lleno" data-kit-open="reservas">Reservar para la merienda</button>
+        <a class="boton" href="#carta" data-ir-pagina="manana" data-ir-seccion="tortas">Pedir tortas para llevar</a>
+      </div>
+      <ul class="te__tortas" aria-label="Sabores de torta" data-revela style="--d:5">
+        <li>Dark Chocolate</li><li>Balcarce</li><li>Carrot Cake</li><li>Chocotorta</li><li>Cheesecake</li><li>Tarta de limón</li><li>Tarta de manzana</li><li>Frambuesa y limón</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ GALERÍA ============ -->
+  <section class="hoja galeria" aria-labelledby="galeria-t">
+    <div class="galeria__cabeza">
+      <h2 id="galeria-t" class="titulo-seccion" data-tipea>Plato por plato</h2>
+      <div class="galeria__flechas">
+        <button type="button" class="flecha" data-gal="-1" aria-label="Fotos anteriores"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" class="flecha" data-gal="1" aria-label="Fotos siguientes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+    <ul class="galeria__tira" data-gal-tira>
+      <li data-revela style="--d:0"><img src="img/platos/agnolotti.webp" alt="Agnolotti de osobuco" loading="lazy" decoding="async" width="900" height="1125"><p>Agnolotti de osobuco</p></li>
+      <li data-revela style="--d:1"><img src="img/platos/arroz.webp" alt="Arroz español con frutos de mar" loading="lazy" decoding="async" width="576" height="720"><p>Arroz español</p></li>
+      <li data-revela style="--d:2"><img src="img/platos/risotto-mano.webp" alt="Risotto de hongos" loading="lazy" decoding="async" width="640" height="800"><p>Risotto de hongos</p></li>
+      <li data-revela style="--d:3"><img src="img/platos/salmon-close.webp" alt="Ensalada de salmón con huevo" loading="lazy" decoding="async" width="900" height="1125"><p>Ensalada Salmón</p></li>
+      <li data-revela style="--d:4"><img src="img/platos/gnocchi.webp" alt="Gnocchi gratinados con copa de vino" loading="lazy" decoding="async" width="900" height="1125"><p>Gnocchi crema de espinaca</p></li>
+      <li><img src="img/platos/ojo-de-bife.webp" alt="Ojo de bife en plancha de hierro" loading="lazy" decoding="async" width="900" height="1125"><p>Ojo de bife</p></li>
+      <li><img src="img/platos/ravioles-corte.webp" alt="Ravioles de verdura" loading="lazy" decoding="async" width="900" height="1125"><p>Ravioles de verdura</p></li>
+      <li><img src="img/platos/linguini.webp" alt="Linguini mediterráneo" loading="lazy" decoding="async" width="576" height="720"><p>Linguini mediterráneo</p></li>
+      <li><img src="img/platos/cheesecake.webp" alt="Cheesecake con frutos rojos" loading="lazy" decoding="async" width="900" height="1125"><p>Cheesecake</p></li>
+      <li><img src="img/platos/ensaladas.webp" alt="Tres ensaladas" loading="lazy" decoding="async" width="900" height="1125"><p>Ensaladas</p></li>
+      <li><img src="img/platos/guarniciones.webp" alt="Guarniciones" loading="lazy" decoding="async" width="900" height="1125"><p>Guarniciones</p></li>
+    </ul>
+  </section>
+
+  <!-- ============ LA ESQUINA ============ -->
+  <section class="hoja esquina" id="esquina" aria-labelledby="esquina-t">
+    <figure class="esquina__fachada" data-revela="foto"><img src="img/local/fachada.webp" alt="Fachada de hormigón visto con el logo de Alicia" loading="lazy" decoding="async"></figure>
+    <div class="esquina__texto">
+      <h2 id="esquina-t" class="titulo-seccion" data-tipea>La esquina</h2>
+      <p data-revela style="--d:1">Hormigón visto por fuera, madera y cobre por dentro. El edificio es de los arquitectos de MMCV; el interior, de Nidolab: pared de listones, lámparas colgantes de cobre, biblioteca y mármol negro.</p>
+      <p data-revela style="--d:2">De día entra la luz por el ventanal. De noche, velas y luz baja.</p>
+    </div>
+    <figure class="esquina__salon" data-revela="foto" style="--d:1"><img src="img/local/salon-vidrio.webp" alt="Salón con ventanal y lámparas de cobre" loading="lazy" decoding="async"></figure>
+    <figure class="esquina__salon2" data-revela="foto" style="--d:2"><img src="img/local/salon-listones.webp" alt="Salón con pared de listones de madera" loading="lazy" decoding="async"></figure>
+  </section>
+
+  <!-- ============ RESERVAS ============ -->
+  <section class="hoja reservas" id="reservas" aria-labelledby="reservas-t">
+    <figure class="reservas__foto" data-revela="foto"><img src="img/local/salon-noche.webp" alt="Salón de Alicia con mesas ocupadas" loading="lazy" decoding="async"></figure>
+    <div class="reservas__caja">
+      <h2 id="reservas-t" class="titulo-seccion" data-tipea>Guardame una mesa</h2>
+      <p class="reservas__sub" data-revela style="--d:1">Almuerzo, merienda o cena. Te confirmamos por WhatsApp.</p>
+      <div data-kit="reservas"></div>
+    </div>
+  </section>
+
+  <!-- ============ DÓNDE ============ -->
+  <section class="hoja donde" id="donde" aria-labelledby="donde-t">
+    <div class="donde__dir">
+      <h2 id="donde-t" class="titulo-seccion" data-tipea>Dónde y cuándo</h2>
+      <p class="donde__calle" data-revela style="--d:1">Asunción 4102<br>Villa Devoto, CABA</p>
+      <div class="donde__ctas" data-revela style="--d:2">
+        <a class="boton boton--lleno" href="https://www.google.com/maps/search/?api=1&query=Asunci%C3%B3n+4102%2C+Villa+Devoto%2C+CABA" target="_blank" rel="noopener">Cómo llegar</a>
+        <a class="boton" href="#" data-wa target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+    <dl class="donde__horas" data-revela style="--d:2">
+      <div><dt>Desayunos</dt><dd>8,30 a 11,30 hs.</dd></div>
+      <div><dt>Almuerzo</dt><dd>12,00 a 16,00 hs.</dd></div>
+      <div><dt>Meriendas</dt><dd>16,00 a 19,30 hs.</dd></div>
+      <div><dt>Cena</dt><dd>Desde las 20,00 hs.</dd></div>
+      <div><dt>Abrimos</dt><dd>Todos los días</dd></div>
+    </dl>
+    <div class="donde__ig" data-revela style="--d:3">
+      <p>Seguinos en Instagram</p>
+      <a href="https://www.instagram.com/aliciadevoto/" target="_blank" rel="noopener">@aliciadevoto</a>
+    </div>
+  </section>
+</main>
+
+<!-- ============ PIE ============ -->
+<footer class="pie">
+  <img src="img/logo-blanco.svg" alt="Alicia" class="pie__logo" width="352" height="125" loading="lazy">
+  <p class="pie__leyenda">No cobramos cubierto &nbsp;-&nbsp; Descuento por pago en efectivo: 10%</p>
+  <p class="pie__datos">Asunción 4102, Villa Devoto &nbsp;/&nbsp; <a href="https://www.instagram.com/aliciadevoto/" target="_blank" rel="noopener">@aliciadevoto</a></p>
+  <p class="pie__credito">Sitio desarrollado por <a href="https://alejomfernandez.com.ar" target="_blank" rel="noopener">Alejo Martín Fernández</a></p>
+</footer>
+
+<script type="module" src="js/main.js?v=3"></script>
+</body>
+</html>
